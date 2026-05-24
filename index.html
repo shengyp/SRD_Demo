@@ -76,6 +76,8 @@
                     </li> -->
                     <li class="page-scroll"><a href="#system" style="font-size: 14px">DEMO</a>
                     </li>
+                    <li class="page-scroll"><a href="#dataset" style="font-size: 14px">DATASET</a>
+                    </li>
                     <li class="page-scroll"><a href="#publication" style="font-size: 14px">PUBLICATION</a>
                     </li>
 <!--                     <li class="page-scroll"><a href="#references" style="font-size: 14px">REFERENCES</a>
@@ -691,9 +693,14 @@
                         <!-- <iframe align="center" width="560" height="315" src="https://youtu.be/AL27TTvfPKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
                         <!--                         <embed src='http://player.youku.com/player.php/sid/XNDE5ODQ3MzAyNA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed> -->
 <!--                     </div> -->
-                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">[Coming soon !]</div>
-                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">Check out our online demo <a href="http://121.48.165.41:40038" target="_blank" style="color: #ff0000">here</a>.
-                    </div>           
+                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">
+                        <b>VIS4SRD</b> is a visual interactive system for suicide-risk-related analysis on social media.
+                        The live demo is available at
+                        <a href="http://43.139.69.134/home" target="_blank" style="color: #ff0000">http://43.139.69.134/home</a>.
+
+                    </div>
+
+
                 </div>
             </div>
             <div class="row" align="center">
@@ -707,6 +714,113 @@
     </div>
 </section>
 
+<!-- dataset & resources -->
+<section id="dataset">
+    <div class="container-fluid with-bg-1">
+        <div class="container">
+            <div class="features">
+                <div class="g-pt-70 g-pb-30">
+                    <div class="g-heading-v10 g-mb-30 ">
+                        <p class="block-name"><span>4. </span>Dataset &amp; Resources</p>
+                    </div>
+
+                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">
+                        VIS4SRD experiments use four public social-media corpora: <b>Reddit</b>, <b>Weibo</b>, <b>SuicidEmoji</b>, and <b>BigData 2025 Cup</b>.
+                        Raw data should be obtained from the official sources below. We release preprocessed CSV splits, BERT-encoded features,
+                        and preprocessing / encoding scripts in
+                        <a href="https://github.com/shengyp/SRD_Project" target="_blank" style="color: #ff0000">SRD_Project</a>.
+                    
+                    </div>
+
+
+                    <div style="margin: 20px 60px">
+                      
+                        <table class="table table-hover table-bordered table-condensed" style="text-indent: 0px; color: #0f0f0f; font-size: 15px;">
+                            <thead>
+                                <tr>
+                                    <th width="14%">Dataset</th>
+                                    <th width="46%">Description</th>
+                                    
+                                    <th width="18%">Official</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>Reddit</b></td>
+                                    <td>
+                                        Collected from mental-health and suicide-related subreddit communities (500 users, 9 subreddits).
+                                        Each post is labeled by professional psychologists on a five-level ordinal scale derived from C-SSRS:
+                                        <b>SU</b> (Support), <b>IN</b> (Indication), <b>ID</b> (Ideation), <b>BR</b> (Behavior), <b>AT</b> (Attempt).
+                                        Class distribution: 20% SU, 20% IN, 34% ID, 15% BR, 9% AT.
+                                    </td>
+                                  
+                                    <td><a href="https://github.com/AmanuelF/Suicide-Risk-Assessment-using-Reddit" target="_blank" style="color: #ff0000">Suicide-Risk-Assessment-using-Reddit</a></td>
+                            
+                                </tr>
+                                <tr>
+                                    <td><b>Weibo</b></td>
+                                    <td>
+                                        Sina Weibo corpus (Cao <em>et al.</em>): users with repeated suicidal expressions vs. non-suicidal controls.
+                                        Binary labels: suicidal (1) / non-suicidal (0). Standard text normalization; balanced splits.
+                                    </td>
+                                   
+                                    <td><a href="https://github.com/bryant03/Sina-Weibo-Dataset" target="_blank" style="color: #ff0000">Sina-Weibo-Dataset</a></td>
+                                </tr>
+                                <tr>
+                                    <td><b>SuicidEmoji</b></td>
+                                    <td>
+                                        Derived from Zhang <em>et al.</em> (SIGIR 2024): imbalanced binary classification (suicidal vs. non-suicidal).
+                                        We use the <b>emoji-removed</b> version (12,325 posts). All emojis are removed from original posts.
+                                    </td>
+                                   
+                                    <td><a href="https://github.com/TianlinZhang668/SuicidEmoji/tree/main" target="_blank" style="color: #ff0000">SuicidEmoji</a></td>
+                                </tr>
+                                <tr>
+                                    <td><b>BigData 2025</b></td>
+                                    <td>
+                                        IEEE BigData 2025 Cup: &ldquo;Suicide Risk Prediction on Social Media.&rdquo;
+                                        Four-level ordinal labels: <b>IN</b>, <b>ID</b>, <b>BR</b>, <b>AT</b>.
+                                        Organizers provide train (7,383) and held-out test (1,283); we re-split the training portion for development.
+                                    </td>
+                                  
+                                    <td><a href="http://www.bigdata2025.com/" target="_blank" style="color: #ff0000">BigData 2025 Cup</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">
+                        <strong>Processing pipeline.</strong>
+                        All four benchmarks follow the same release protocol in
+                        <a href="https://github.com/shengyp/SRD_Project" target="_blank" style="color: #ff0000">SRD_Project</a>:
+                        <ol>
+                            <li><b>Official acquisition</b> — Download raw data from the official links above. Weibo and SuicidEmoji require following each provider&rsquo;s license or access instructions.</li>
+                            <li><b>Cleaning &amp; CSV export</b> — Posts undergo standard text normalization (encoding, formatting, and field alignment). For <b>Weibo</b> and <b>SuicidEmoji</b>, we further <b>screen</b> samples and convert them into CSV; SuicidEmoji uses the emoji-removed subset. <b>Reddit</b> and <b>BigData 2025</b> are preprocessed into the same CSV schema without additional screening.</li>
+                            <li><b>Train / validation / test splits</b> — Fixed partitions as in our paper: Reddit (400 / 50 / 50); Weibo (5,861 / 733 / 733); SuicidEmoji (9,860 / 1,232 / 1,233); BigData 2025 (5,906 / 739 / 738, derived from the cup training set).</li>
+                        </ol>
+                    </div>
+                    
+
+                    <div style="margin: 20px 60px; color: #0f0f0f; font-size: 16px;">
+                        <strong>Command-line download</strong>:
+                        <pre style="background: #f5f5f5; padding: 15px; border: 1px solid #ddd; overflow-x: auto; margin-top: 10px;"># raw_data 
+wget https://github.com/shengyp/SRD_Project/releases/download/v1.0/SRD-v1.0.tar.gz
+tar -xzvf SRD-v1.0.tar.gz
+
+# our data
+wget https://github.com/shengyp/SRD_Project/releases/download/v1.0/SRD-process-v1.0.tar.gz
+tar -xzvf SRD-process-v1.0.tar.gz</pre>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- include code, trained models and paper-->
 <section id="publication">
     <div class="container-fluid with-bg-1">
@@ -714,19 +828,22 @@
             <div class="features">
                 <div class="g-pt-70 g-pb-30">
                     <div class="g-heading-v10 g-mb-30 ">
-                        <p class="block-name"><span>4. </span>Publication</p>
+                        <p class="block-name"><span>5. </span>Publication</p>
                     </div>
 <!--                     <div style="margin: 0 auto; text-align: center;"> -->
                         <!-- <iframe align="center" width="560" height="315" src="https://youtu.be/AL27TTvfPKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
                         <!--                         <embed src='http://player.youku.com/player.php/sid/XNDE5ODQ3MzAyNA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed> -->
 <!--                     </div> -->
-                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">To facilitate further research on this topic, we have made the source code and dataset of proposed framework publicly available. If you will leverage these resources, please cite our paper.
+                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">
+                        Source code, preprocessing scripts, CSV exports, and BERT features are described in
+                        <a href="#dataset" style="color: #ff0000">Section 4 (Dataset &amp; Resources)</a>.
+                
                     </div>
                     <br/>
 
-                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">Code will be updated after the work be accepted.
-                    <br/>
-                    https://github.com/shengyp/SRD_Project
+                    <div style="color: #0f0f0f; font-size: 18px; margin:10px 60px">
+                        Code repository:
+                        <a href="https://github.com/shengyp/SRD_Project" target="_blank" style="color: #ff0000">https://github.com/shengyp/SRD_Project</a>
                     </div>            
                 </div>
             </div>
@@ -747,7 +864,7 @@
         <div>
             <div class="subscribe">
                 <div class="g-heading-v10 g-mb-30 ">
-                    <p class="block-name"><span>5. </span>Citation</p>
+                    <p class="block-name"><span>6. </span>Citation</p>
                 </div>
                 <div class="row equal-height-columns">
                     <div class="content">
@@ -773,7 +890,7 @@
         <div class="whats-new">
             <div class="g-heading-v10 g-mb-10 text-center">
                 <div class="g-heading-v10 g-mb-30 ">
-                    <p class="block-name"><span>6.</span> Acknowledgement</p>
+                    <p class="block-name"><span>7.</span> Acknowledgement</p>
                 </div>
             </div>
             <p class="content"></p>
